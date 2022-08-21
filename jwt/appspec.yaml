@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-southeast-1:274201610284:task-definition/taskD_jwt_842201:1"
+        LoadBalancerInfo:
+          ContainerName: "jwt_container_842201"
+          ContainerPort: 80
+        PlatformVersion: "LATEST"
